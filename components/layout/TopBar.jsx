@@ -13,6 +13,7 @@ const TopBar = () => {
   const { user, isLoaded } = useUser();
 
   const [loading, setLoading] = useState(true);
+
   const [userData, setUserData] = useState({});
 
   const getUser = async () => {
@@ -57,7 +58,7 @@ const TopBar = () => {
       </button>
 
       <div className="flex gap-4 md:hidden">
-        <Link href={`/profile/${userData?._id || 'UserFound'}/posts`}>
+        <Link href={`/profile/${userData._id}/posts`}>
           <Person sx={{ fontSize: "35px", color: "white" }} />
         </Link>
 
